@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .header {
+            padding: 20px;
+            text-align: center;
+            background-color: #ccc;
+            margin-bottom: 10px;
+        }
+        @media only screen and (max-width: 600px) {
+            .header {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <Span>Responsive Header</Span>
+    </div>
+    <div class="main_content" style="margin-top: 10px;">
+        <span>Main Content</span>
+    </div>
+    <div class="footer" style="margin-top: 10px;">
+        <span>Footer</span>
+    </div>
+</body>
+</html>

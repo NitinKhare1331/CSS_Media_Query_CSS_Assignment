@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query CSS</title>
+    <style>
+        .container{
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 
+            'BOX1 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX4'            
+            'BOX1 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX4'            
+            'BOX1 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX4'           
+            'BOX1 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX2 BOX4'           
+            'BOX1 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX4'            
+            'BOX1 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX4'            
+            'BOX1 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX4'            
+            'BOX1 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX3 BOX4';
+        }
+        .box1{
+            grid-area: BOX1;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .box2{
+            grid-area: BOX2;
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+        .box3{
+            grid-area: BOX3;
+            background-color: yellow;
+            color: white;
+            text-align: center;
+        }
+        .box4{
+            grid-area: BOX4;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        @media (max-width: 600px){
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+            .box {
+                padding: 20px;
+            }
+            .box4{
+                margin-top: 55vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+    </div>
+</body>
+</html>
